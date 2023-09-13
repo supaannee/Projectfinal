@@ -42,12 +42,12 @@ let hnweight = Number.parseFloat(24.9 * (heightInMetre*heightInMetre)).toFixed(2
 let lnweight = Number.parseFloat(18.5 * (heightInMetre*heightInMetre)).toFixed(2);
 
 
-	 if (bmi < 18.5){statusDisplay.innerHTML = "Under Weight";}
-else if (bmi <= 24.9){statusDisplay.innerHTML = "Normal Weight";}
-else if (bmi <= 29.9){statusDisplay.innerHTML = "Over Weight";}
-else if (bmi <= 34.9){statusDisplay.innerHTML = "Class I obesity";}
-else if (bmi <= 39.9){statusDisplay.innerHTML = "Class II obesity";}
-else if (bmi >= 40){statusDisplay.innerHTML = "Class III obesity";}
+	 if (bmi < 18.5){statusDisplay.innerHTML = "น้ำหนักน้อยเกินไป";}
+else if (bmi <= 24.9){statusDisplay.innerHTML = "น้ำหนักปกติ";}
+else if (bmi <= 29.9){statusDisplay.innerHTML = "น้ำหนักเกิน";}
+else if (bmi <= 34.9){statusDisplay.innerHTML = "โรคอ้วนระดับ 1";}
+else if (bmi <= 39.9){statusDisplay.innerHTML = "โรคอ้วนระดับ 2";}
+else if (bmi >= 40){statusDisplay.innerHTML = "โรคอ้วนระดับ 3";}
 
 // Calculating BMR
 let bmrm = (66+(13.7*weight)+(5*heightInCm)-(6.8*age));
@@ -55,7 +55,7 @@ let bmrf = (665+(9.6*weight)+(1.8*heightInCm)-(4.7*age));
 
 bmiDisplay.innerHTML = bmi.toFixed(2);
 // nweightDisplay.innerHTML = `${lnweight} KG to ${hnweight} KG`;
-nweightDisplay.innerHTML = lnweight+" KG to "+hnweight+" KG";
+nweightDisplay.innerHTML = lnweight+" KG ถึง "+hnweight+" KG";
 
 if (fgender.checked && age != ""){
 	bmrDisplay.innerHTML = bmrf.toFixed(2);
